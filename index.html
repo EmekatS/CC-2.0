@@ -50,7 +50,7 @@
                         <div class="caption center-align">
                             <h1 class="bold-text black-text hide-on-med-and-down" style="font-size: 9em;">#Loveisinsession</h1>
                             <h1 class="bold-text black-text hide-on-large-only" style="font-size: 3em;">#Loveisinsession</h1>
-                            <button class="btn btn-large white black-text curved z-depth-0" style="margin-top: 20px; border: 3px solid #f06292;">Join the Waitlist</button>
+                            <a href="#modal" class="btn btn-large pink lighten-2 white-text curved z-depth-0 modal-trigger">Join the Waitlist</a>
                         </div>
                     </li>
                 </ul>
@@ -70,7 +70,7 @@
                             </div>
                             <div class="card-content" style="margin-top: -180px;">
                                 <h1>Campus Crush</h1>
-                                <button class="btn btn-large pink lighten-2 white-text curved z-depth-0">Join the Waitlist</button>
+                                <a href="#modal" class="btn btn-large pink lighten-2 white-text curved z-depth-0 modal-trigger">Join the Waitlist</a>
                             </div>
                         </div>
                     </div>
@@ -84,7 +84,7 @@
                         <h1 class="" style="font-size: 4em; font-weight: 1000; margin-bottom: -10px;">What are YOU looking for?</h1>
                         <span class="auto bold-text pink-text text-lighten-2" style="font-size: 3em;"></span>
                         <p class="flow-text grey-text" >Meet the kind of people your looking for and more, Here on Campus Crush</p>
-                        <button class="btn btn-large white black-text curved z-depth-0" style="border: 3px solid #f06292;">Join the Waitlist</button>
+                        <a href="#modal" class="btn btn-large pink lighten-2 white-text curved z-depth-0 modal-trigger">Join the Waitlist</a>
                     </div>
                     <div class="col s12 l6">
                         <div class="carousel">
@@ -196,11 +196,28 @@
                     <div class="col s12">
                         <h1 class="bold-text">Excited?</h1>
                         <p class="flow-text grey-text">We know you are, Join the waitlist to be notified of release early, and have your name pinned down on Campus Crush as part of our first 1000 users</p>
-                        <button class="btn btn-large pink lighten-2 white-text curved z-depth-0">Join the Waitlist</button>
+                        <a href="#modal" class="btn btn-large pink lighten-2 white-text curved z-depth-0 modal-trigger">Join the Waitlist</a>
                     </div>
                 </div>
             </div>
         </section>
+        <div class="modal" id="modal">
+            <div class="container">
+                <form action="">
+                    <div class="row">
+                        <h3 class="bold-text">Your <span class="pink-text text-lighten-2">Details</span></h3>
+                        <p class="long-text grey-text">Enter your E-MAil address to be notified of release</p>
+                        <div class="col s12 input-field">
+                            <label for="email">Enter Email</label>
+                            <input type="email" required id="email">
+                        </div>
+                        <div class="col s12 input-field">
+                            <button class="pink white-text lighten-2 btn btn-large curved">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
         <footer class="page-footer white">
             <div class="footer-copyright">
                 <div class="container center">
@@ -221,7 +238,6 @@
             });
                 $('.carousel').carousel();
                 $('.modal').modal();
-                $('.sidenav').sidenav();
         });
     </script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
