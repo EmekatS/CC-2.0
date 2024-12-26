@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Patrick+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -36,6 +38,16 @@
         }
         .btn:active{
             transform: translate(-1rem);
+        }
+        .input-field input:focus{
+            border-bottom: 1px solid #f06292 !important;
+            box-shadow: 0 1px 0 0 #f06292 !important;
+        }
+        .input-field .prefix.active, label.active{
+            color: #f06292 !important;
+        }
+        span.red-text.text-darken-4::after{
+            background-color: #f06292;
         }
     </style>
     <title>Campus Crush</title>
@@ -205,6 +217,11 @@
                         <h1 class="bold-text">Excited?</h1>
                         <p class="flow-text grey-text">We know you are, Join the waitlist to be notified of release early, and have your name pinned down on Campus Crush as part of our first 1000 users</p>
                         <a href="#modal" class="btn btn-large pink lighten-2 white-text curved z-depth-0 modal-trigger">Join the Waitlist</a>
+                        <ul style="display: flex; justify-content: center; gap: 20px;">
+                            <li><a href="" style="font-size: 5em; color: #f06292;"><i class='bx bxl-instagram'></i></a></li>
+                            <li><a href="https://www.tiktok.com/@campuscrush_app" style="font-size: 5em; color: #f06292;"><i class='bx bxl-tiktok' ></i></a></li>
+                            <li><a href="#" style="font-size: 5em; color: #f06292;"><i class='bx bxl-github'></i></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -265,7 +282,11 @@
                         <h3 class="bold-text">Your <span class="pink-text text-lighten-2">Details</span></h3>
                         <p class="long-text grey-text">Enter your E-MAil address to be notified of release</p>
                         <div class="col s12 input-field">
-                            <label for="email">Enter Email</label>
+                            <label for="name">Enter Your Name</label>
+                            <input type="text" required id="name">
+                        </div>
+                        <div class="col s12 input-field">
+                            <label for="email">Enter your Email</label>
                             <input type="email" required id="email">
                         </div>
                         <div class="col s12 input-field">
@@ -278,7 +299,7 @@
         <footer class="page-footer white">
             <div class="footer-copyright">
                 <div class="container center">
-                    <h4 class="pink-text text-ligten-2">&copy;2024 All Rights Reserved, Campus Crush.</h4>
+                    <h4 class="pink-text text-ligten-2">&copy;Campus Crush, 2024 All Rights Reserved.</h4>
                     <h5 class="bold-text black-text"><span class="pink-text text-lighten-2">#</span>Loveisinsession</h5>
                 </div>
             </div>
