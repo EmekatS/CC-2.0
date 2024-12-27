@@ -104,7 +104,7 @@
                     <div class="col s12 l6">
                         <h1 class="" style="font-size: 4em; font-weight: 1000; margin-bottom: -10px;">What are YOU looking for?</h1>
                         <span class="auto bold-text pink-text text-lighten-2" style="font-size: 3em;"></span>
-                        <p class="flow-text grey-text" >Meet the kind of people your looking for and more, Here on Campus Crush</p>
+                        <p class="flow-text grey-text" >Meet the kind of people you're looking for and more, Here on Campus Crush</p>
                         <a href="#modal" class="btn btn-large pink lighten-2 white-text curved z-depth-0 modal-trigger">Join the Waitlist</a>
                     </div>
                     <div class="col s12 l6">
@@ -219,15 +219,17 @@
                         <h3 class="bold-text">Listen to Student's <span class="pink-text text-lighten-2">Stories</span></h3>
                         <p class="flow-text grey-text">Want to watch or participate? Follow us here</p>
                         <ul style="display: flex; justify-content: center; gap: 20px;">
-                            <li><a href="" style="font-size: 5em; color: #f06292;"><i class='bx bxl-instagram'></i></a></li>
-                            <li><a href="https://www.tiktok.com/@campuscrush_app" style="font-size: 5em; color: #f06292;"><i class='bx bxl-tiktok' ></i></a></li>
-                            <li><a href="#" style="font-size: 5em; color: #f06292;"><i class='bx bxl-github'></i></a></li>
+                            <li><a href="" class="tooltipped" data-position="left" data-tooltip="Instagram" style="font-size: 5em; color: #f06292;"><i class='bx bxl-instagram'></i></a></li>
+                            <li><a href="https://www.tiktok.com/@campuscrush_app" class="tooltipped" data-position="bottom" data-tooltip="TikTok" style="font-size: 5em; color: #f06292;"><i class='bx bxl-tiktok' ></i></a></li>
+                            <li><a href="#" class="tooltipped" data-position="bottom" data-tooltip="Youtube" style="font-size: 5em; color: #f06292;"><i class='bx bxl-youtube'></i></a></li>
+                            <li><a href="#" class="tooltipped" data-position="bottom" data-tooltip="Snapchat" style="font-size: 5em; color: #f06292;"><i class='bx bxl-snapchat'></i></a></li>
+                            <li><a href="#" class="tooltipped" data-position="bottom" data-tooltip="X" style="font-size: 5em; color: #f06292;"><i class='bx bx-x'></i></a></li>
                         </ul>
                     </div>
                     <div class="col s12 l4 push-l1">
                         <div class="carousel carousel-slider center">
                             <div class="carousel-fixed-item">
-                                
+
                             </div>
                             <div class="carousel-item scale center">
                                 <h2 class="white-text bold-text"><span class="pink-text text-lighten-2">#</span>Kofe</h2>
@@ -351,9 +353,11 @@
                 $('.carousel').carousel();
                 $('.carousel.carousel-slider').carousel({
                     indicators: true,
-                    fullWidth: true
+                    fullWidth: true,
+                    duration: 2000
                 });
                 $('.modal').modal();
+                $('.tooltipped').tooltip();
         });
             let typed = new Typed(".auto",{
                 strings : ["Romance😍?", "A BFF🥰?", "Or....", "The ONE❤"],
