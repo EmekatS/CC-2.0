@@ -6,6 +6,7 @@
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Patrick+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -90,7 +91,7 @@
                             </div>
                             <div class="card-content" style="margin-top: -180px;">
                                 <h1>Campus Crush</h1>
-                                <a href="#modal" class="btn btn-large pink lighten-2 white-text curved z-depth-0 modal-trigger">Join the Waitlist</a>
+                                <a href="#modal" class="btn btn-large pink lighten-2 white-text curved z-depth-0 modal-trigger" style="pointer-events: all;">Join the Waitlist</a>
                             </div>
                         </div>
                     </div>
@@ -210,6 +211,41 @@
                 </div>
             </div>
         </section>
+        <section  style="background-image: url(./img/whiteBg.jpg);">
+            <div class="container center">
+                <div class="row">
+                    <h1 class="bold-text">Amazing <span class="pink-text text-lighten-2">Content</span> for you</h1>
+                    <div class="col s12 l6">
+                        <h3 class="bold-text">Listen to Student's <span class="pink-text text-lighten-2">Stories</span></h3>
+                        <p class="flow-text grey-text">Want to watch or participate? Follow us here</p>
+                        <ul style="display: flex; justify-content: center; gap: 20px;">
+                            <li><a href="" style="font-size: 5em; color: #f06292;"><i class='bx bxl-instagram'></i></a></li>
+                            <li><a href="https://www.tiktok.com/@campuscrush_app" style="font-size: 5em; color: #f06292;"><i class='bx bxl-tiktok' ></i></a></li>
+                            <li><a href="#" style="font-size: 5em; color: #f06292;"><i class='bx bxl-github'></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col s12 l4 push-l1">
+                        <div class="carousel carousel-slider center">
+                            <div class="carousel-fixed-item">
+                                
+                            </div>
+                            <div class="carousel-item scale center">
+                                <h2 class="white-text bold-text"><span class="pink-text text-lighten-2">#</span>Kofe</h2>
+                                <a href="https://www.tiktok.com/@campuscrush_app"><img src="./img/interview1.jpeg" style="width: 300px; z-index: -1; position: relative; top: -80px;"></a>
+                            </div>
+                            <div class="carousel-item scale center">
+                                <h2 class="white-text bold-text"><span class="pink-text text-lighten-2">#</span>Dawn</h2>
+                                <a href="https://www.tiktok.com/@campuscrush_app"><img src="./img/interview2.jpeg" style="width: 300px; z-index: -1; position: relative; top: -80px;"></a>
+                            </div>
+                            <div class="carousel-item scale center">
+                                <h2 class="white-text bold-text"><span class="pink-text text-lighten-2">#</span>Georgina</h2>
+                                <a href="https://www.tiktok.com/@campuscrush_app"><img src="./img/interview3.jpeg" style="width: 300px; z-index: -1; position: relative; top: -80px;"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="section" style="background-image: url(./img/whiteBg.jpg);">
             <div class="container center">
                 <div class="row">
@@ -217,11 +253,6 @@
                         <h1 class="bold-text">Excited?</h1>
                         <p class="flow-text grey-text">We know you are, Join the waitlist to be notified of release early, and have your name pinned down on Campus Crush as part of our first 1000 users</p>
                         <a href="#modal" class="btn btn-large pink lighten-2 white-text curved z-depth-0 modal-trigger">Join the Waitlist</a>
-                        <ul style="display: flex; justify-content: center; gap: 20px;">
-                            <li><a href="" style="font-size: 5em; color: #f06292;"><i class='bx bxl-instagram'></i></a></li>
-                            <li><a href="https://www.tiktok.com/@campuscrush_app" style="font-size: 5em; color: #f06292;"><i class='bx bxl-tiktok' ></i></a></li>
-                            <li><a href="#" style="font-size: 5em; color: #f06292;"><i class='bx bxl-github'></i></a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -306,7 +337,10 @@
         </footer>
     </main>
     <script src="./js/jquery.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb60SusuzixeV4y/faTgGtohetphbbj0=" crossorigin="anonymous"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         $(document).ready(function(){
             $('.slider').slider({
@@ -315,52 +349,51 @@
                 indicators: false,
             });
                 $('.carousel').carousel();
+                $('.carousel.carousel-slider').carousel({
+                    indicators: true,
+                    fullWidth: true
+                });
                 $('.modal').modal();
         });
-    </script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        let typed = new Typed(".auto",{
-            strings : ["Romance😍?", "A BFF🥰?", "Or....", "The ONE❤"],
-            typeSpeed : 100,
-            backSpeed : 50,
-            backDelay : 2000,
-            loop : true,
-        })
-    </script>
-    <script>
-        const days = document.getElementById("days");
-        const hours = document.getElementById("hours");
-        const mins = document.getElementById("mins");
-        const secs = document.getElementById("secs");
-        const daysMobile = document.getElementById("days-mobile");
-        const hoursMobile = document.getElementById("hours-mobile");
-        const minsMobile = document.getElementById("mins-mobile");
-        const secsMobile = document.getElementById("secs-mobile");
+            let typed = new Typed(".auto",{
+                strings : ["Romance😍?", "A BFF🥰?", "Or....", "The ONE❤"],
+                typeSpeed : 100,
+                backSpeed : 50,
+                backDelay : 2000,
+                loop : true,
+            })
+            const days = document.getElementById("days");
+            const hours = document.getElementById("hours");
+            const mins = document.getElementById("mins");
+            const secs = document.getElementById("secs");
+            const daysMobile = document.getElementById("days-mobile");
+            const hoursMobile = document.getElementById("hours-mobile");
+            const minsMobile = document.getElementById("mins-mobile");
+            const secsMobile = document.getElementById("secs-mobile");
 
-        const currentYear = new Date().getFullYear();
+            const currentYear = new Date().getFullYear();
 
-        const releaseDate = new Date(`January 20 ${currentYear + 1} 00:00:00`);
+            const releaseDate = new Date(`January 20 ${currentYear + 1} 00:00:00`);
 
-        function updateCountdown(){
-            const currentTime = new Date();
-            const diference = releaseDate - currentTime;
-            const day = Math.floor(diference / 1000 / 60 / 60 / 24);
-            const hour = Math.floor(diference / 1000 / 60 / 60) % 24;
-            const min = Math.floor(diference / 1000 / 60) % 60;
-            const sec = Math.floor(diference / 1000) % 60;
+            function updateCountdown(){
+                const currentTime = new Date();
+                const diference = releaseDate - currentTime;
+                const day = Math.floor(diference / 1000 / 60 / 60 / 24);
+                const hour = Math.floor(diference / 1000 / 60 / 60) % 24;
+                const min = Math.floor(diference / 1000 / 60) % 60;
+                const sec = Math.floor(diference / 1000) % 60;
 
-            days.innerHTML = day < 10 ? "0" + day : day;
-            hours.innerHTML = hour < 10 ? "0" + hour : hour;
-            mins.innerHTML = min < 10 ? "0" + min : min;
-            secs.innerHTML = sec < 10 ? "0" + sec : sec;
-            daysMobile.innerHTML = day < 10 ? "0" + day : day;
-            hoursMobile.innerHTML = hour < 10 ? "0" + hour : hour;
-            minsMobile.innerHTML = min < 10 ? "0" + min : min;
-            secsMobile.innerHTML = sec < 10 ? "0" + sec : sec;
-        }
+                days.innerHTML = day < 10 ? "0" + day : day;
+                hours.innerHTML = hour < 10 ? "0" + hour : hour;
+                mins.innerHTML = min < 10 ? "0" + min : min;
+                secs.innerHTML = sec < 10 ? "0" + sec : sec;
+                daysMobile.innerHTML = day < 10 ? "0" + day : day;
+                hoursMobile.innerHTML = hour < 10 ? "0" + hour : hour;
+                minsMobile.innerHTML = min < 10 ? "0" + min : min;
+                secsMobile.innerHTML = sec < 10 ? "0" + sec : sec;
+            }
 
-        setInterval(updateCountdown, 1000);
+            setInterval(updateCountdown, 1000);
 
     </script>
 </body>
