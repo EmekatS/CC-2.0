@@ -13,6 +13,7 @@
         body{
             font-family: "Patrick Hand";
             overflow-x: hidden;
+            background-image: url(./img/whiteBg.jpg);
         }
         .bold-text{
             font-weight: bold;
@@ -50,6 +51,44 @@
         span.red-text.text-darken-4::after{
             background-color: #f06292;
         }
+        .slider{
+            width: 100%;
+            max-height: 240px;
+            overflow: hidden;
+            mask-image: linear-gradient(
+                to right,
+                transparent,
+                #000 10% 90%,
+                transparent
+            );
+        }
+        .slider .list{
+            display: flex;
+            width: 100%;
+            min-width: calc(var(--width) * var(--quantity));
+            position: relative;
+        }
+        .slider .list .item{
+            width: var(--width);
+            height: var(--height);
+            position: absolute;
+            left: 100%;
+            animation: autoRun 10s linear infinite;
+            transition: filter 0.5s;
+            animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) )!important;
+            transition: all .5s;
+        }
+
+        @keyframes autoRun{
+            from{
+                left: 100%;
+            }to{
+                left: calc(var(--width) * -1);
+            }
+        }
+        .slider:hover .item{
+            animation-play-state: paused!important;
+        }
     </style>
     <title>Campus Crush</title>
 </head>
@@ -61,24 +100,65 @@
                     <div class="container center">
                         <a href="./index.html" class="brand-logo hide-on-med-and-down"><img src="./img/logo.png" alt="" style="max-width: 200px; margin-top: -55px; margin-left: -90px;"></a>
                         <a href="./index.html" class="brand-logo hide-on-large-only"><img src="./img/logo.png" alt="" style="max-width: 200px; margin-top: -55px;"></a>
+
                     </div>
                 </nav>
             </div>
-            <div class="slider">
-                <ul class="slides">
-                    <li>
-                        <img src="./img/pinkBg.jpg">
-                        <div class="caption center-align">
-                            <h1 class="bold-text black-text hide-on-med-and-down" style="font-size: 9em;">#Loveisinsession</h1>
-                            <h1 class="bold-text black-text hide-on-large-only" style="font-size: 3em;">#Loveisinsession</h1>
-                            <a href="#modal" class="btn btn-large pink lighten-2 white-text curved z-depth-0 modal-trigger">Join the Waitlist</a>
+            <section style="background-image: url(./img/pinkBg.jpg);">
+                <div class="container center">
+                    <h1 class="bold-text hide-on-med-and-down" style="font-size: 9em;"><span class="pink-text text-lighten-2">#</span>Loveinsession</h1>
+                    <h1 class="bold-text hide-on-large-only" style="font-size: 3em;"><span class="pink-text text-lighten-2">#</span>Loveinsession</h1>
+                    <div class="row hide-on-med-and-down">
+                        <div class="col s12">
+                            <div class="row">
+                                <h1 class="bold-text"><span class="pink-text text-lighten-2">Countdown</span> with us🥰</h1>
+                                <div class="col s12 l3">
+                                    <div class="card center scale" style="width: 200px; border-radius: 40px; background-color: rgb(247, 247, 247);">
+                                        <div class="card-content">
+                                            <h1 class="bold-text" style="font-size: 5em;" id="days"></h1>
+                                            <h4 class="long-text grey-text">Days</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 l3">
+                                    <div class="card center scale" style="width: 200px; border-radius: 40px; background-color: rgb(247, 247, 247);">
+                                        <div class="card-content">
+                                            <h1 class="bold-text" style="font-size: 5em;" id="hours"></h1>
+                                            <h4 class="long-text grey-text">Hours</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 l3">
+                                    <div class="card center scale" style="width: 200px; border-radius: 40px; background-color: rgb(247, 247, 247);">
+                                        <div class="card-content">
+                                            <h1 class="bold-text" style="font-size: 5em;" id="mins"></h1>
+                                            <h4 class="long-text grey-text">Mins</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 l3">
+                                    <div class="card center scale" style="width: 200px; border-radius: 40px; background-color: rgb(247, 247, 247);">
+                                        <div class="card-content">
+                                            <h1 class="bold-text" style="font-size: 5em;" id="secs"></h1>
+                                            <h4 class="long-text grey-text">Secs</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </li>
-                </ul>
-            </div>
+                    </div>
+                    <div class="row hide-on-large-only">
+                        <h1 class="bold-text"><span class="pink-text text-lighten-2">Countdown</span> with us🥰</h1>
+                        <div class="col s12">
+                            <h2 class="bold-text"><span id="days-mobile"></span> : <span id="hours-mobile"></span> : <span id="mins-mobile"></span> : <span id="secs-mobile"></span></h2>
+                        </div>
+                    </div>
+                    <a href="#modal" class="btn btn-large pink lighten-2 white-text curved z-depth-0 modal-trigger" style="pointer-events: all; margin-bottom: 40px;">Join the Waitlist</a>
+                </div>
+            </section>
         </header>
         <section>
-            <div class="container" style="background-image: url(./img/whiteBg.jpg);">
+            <div class="container" >
                 <div class="row">
                     <div class="col s12 l6">
                         <h2 class="bold-text">What is <span class="pink-text text-lighten-2">Campus Crush?</span></h2>
@@ -98,13 +178,78 @@
                 </div>
             </div>
         </section>
-        <section style="background-image: url(./img/whiteBg.jpg);">
+        <section class="section">
+            <div class="container center">
+                <h1 class="bold-text">Why <span class="pink-text text-lighten-2">Choose</span> Campus Crush <span class="pink-text text-lighten-2">?</span></h1>
+                <p class="flow-text grey-text">We offer a wide variety of features to make your experience memorable</p>
+                <div class="row">
+                    <div class="col s12">
+                        <div class="slider" reverse="true" style="
+                            --width: 200px;
+                            --height: 200px;
+                            --quantity: 9;
+                        ">
+                            <div class="list">
+                                <div class="item" style="--position: 1">
+                                    <div class="card center z-depth-0" style="border-radius: 50%; height: 200px; border: 2px solid #f06292;">
+                                        <div class="card-image" style="display: flex; justify-content: center;"><img src="./img/customizable.png" style="max-width: 70px; margin-top: 40px; margin-bottom: -20px;"></div>
+                                        <div class="card-content">
+                                            <h5>Customizable Profiles</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="--position: 2">
+                                    <div class="card center z-depth-0" style="border-radius: 50%; height: 200px; border: 2px solid #f06292;">
+                                        <div class="card-image" style="display: flex; justify-content: center;"><img src="./img/customizable.png" style="max-width: 70px; margin-top: 40px; margin-bottom: -20px;"></div>
+                                        <div class="card-content">
+                                            <h5>Customizable Profiles</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="--position: 3">
+                                    <div class="card center z-depth-0" style="border-radius: 50%; height: 200px; border: 2px solid #f06292;">
+                                        <div class="card-image" style="display: flex; justify-content: center;"><img src="./img/customizable.png" style="max-width: 70px; margin-top: 40px; margin-bottom: -20px;"></div>
+                                        <div class="card-content">
+                                            <h5>Customizable Profiles</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="--position: 4">
+                                    <div class="card center z-depth-0" style="border-radius: 50%; height: 200px; border: 2px solid #f06292;">
+                                        <div class="card-image" style="display: flex; justify-content: center;"><img src="./img/customizable.png" style="max-width: 70px; margin-top: 40px; margin-bottom: -20px;"></div>
+                                        <div class="card-content">
+                                            <h5>Customizable Profiles</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="--position: 5">
+                                    <div class="card center z-depth-0" style="border-radius: 50%; height: 200px; border: 2px solid #f06292;">
+                                        <div class="card-image" style="display: flex; justify-content: center;"><img src="./img/customizable.png" style="max-width: 70px; margin-top: 40px; margin-bottom: -20px;"></div>
+                                        <div class="card-content">
+                                            <h5>Customizable Profiles</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="--position: 6">
+                                    <div class="card center z-depth-0" style="border-radius: 50%; height: 200px; border: 2px solid #f06292;">
+                                        <div class="card-image" style="display: flex; justify-content: center;"><img src="./img/customizable.png" style="max-width: 70px; margin-top: 40px; margin-bottom: -20px;"></div>
+                                        <div class="card-content">
+                                            <h5>Customizable Profiles</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section >
             <div class="container">
                 <div class="row">
                     <div class="col s12 l6">
                         <h1 class="" style="font-size: 4em; font-weight: 1000; margin-bottom: -10px;">What are YOU looking for?</h1>
                         <span class="auto bold-text pink-text text-lighten-2" style="font-size: 3em;"></span>
-                        <p class="flow-text grey-text" >Meet the kind of people you're looking for and more, Here on Campus Crush</p>
+                        <p class="flow-text grey-text" >Meet the kind of people you're looking for and build meaning full connections Here on Campus Crush</p>
                         <a href="#modal" class="btn btn-large pink lighten-2 white-text curved z-depth-0 modal-trigger">Join the Waitlist</a>
                     </div>
                     <div class="col s12 l6">
@@ -143,167 +288,75 @@
                 </div>
             </div>
         </section>
-        <section class="section" style="background-image: url(./img/pinkBg.jpg);">
-            <div class="container center">
-                <h1 class="bold-text">Why <span class="pink-text text-lighten-2">Choose</span> Campus Crush <span class="pink-text text-lighten-2">?</span></h1>
-                <p class="flow-text grey-text">We offer a wide variety of features to make your experience memorable</p>
-                <div class="row">
-                    <div class="col s12 l4">
-                        <div class="card white scale" style="border-radius: 30px; display: flex; flex-direction: row;">
-                            <div class="card-image" style="display: flex; justify-content: center; align-items: center;">
-                                <img style="max-width: 120px; margin-left: 10px;" src="./img/customizable.png" alt="">
-                            </div>
-                            <div class="card-content">
-                                <h4 class="bold-text">Customizable Profiles</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 l4">
-                        <div class="card white scale" style="border-radius: 30px; display: flex; flex-direction: row;">
-                            <div class="card-image" style="display: flex; justify-content: center; align-items: center;">
-                                <img style="max-width: 120px; margin-left: 10px;" src="./img/dating-feature.png" alt="">
-                            </div>
-                            <div class="card-content">
-                                <h4 class="bold-text">Dating Feature</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 l4">
-                        <div class="card white scale" style="border-radius: 30px; display: flex; flex-direction: row;">
-                            <div class="card-image" style="display: flex; justify-content: center; align-items: center;">
-                                <img style="max-width: 120px; margin-left: 10px;" src="./img/verified-connections.png" alt="">
-                            </div>
-                            <div class="card-content">
-                                <h4 class="bold-text">Verified Connections</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 l4">
-                        <div class="card white scale" style="border-radius: 30px; display: flex; flex-direction: row;">
-                            <div class="card-image" style="display: flex; justify-content: center; align-items: center;">
-                                <img style="max-width: 120px; margin-left: 10px;" src="./img/early-access.png" alt="">
-                            </div>
-                            <div class="card-content">
-                                <h4 class="bold-text">Exclusive Access</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 l4">
-                        <div class="card white scale" style="border-radius: 30px; display: flex; flex-direction: row;">
-                            <div class="card-image" style="display: flex; justify-content: center; align-items: center;">
-                                <img style="max-width: 120px; margin-left: 10px;" src="./img/hangout.png" alt="">
-                            </div>
-                            <div class="card-content">
-                                <h4 class="bold-text">Make Plans</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 l4">
-                        <div class="card white scale" style="border-radius: 30px; display: flex; flex-direction: row;">
-                            <div class="card-image" style="display: flex; justify-content: center; align-items: center;">
-                                <img style="max-width: 120px; margin-left: 10px;" src="./img/games.png" alt="">
-                            </div>
-                            <div class="card-content">
-                                <h4 class="bold-text">Exciting Games</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section  style="background-image: url(./img/whiteBg.jpg);">
+        <section  >
             <div class="container center">
                 <div class="row">
-                    <h1 class="bold-text">Amazing <span class="pink-text text-lighten-2">Content</span> for you</h1>
+                    <h1 class="bold-text">Be part of the <span class="pink-text text-lighten-2">Conversation</span></h1>
                     <div class="col s12 l6">
-                        <h3 class="bold-text">Listen to Student's <span class="pink-text text-lighten-2">Stories</span></h3>
-                        <p class="flow-text grey-text">Want to watch or participate? Follow us here</p>
+                        <p class="grey-text" style="font-size: 1.5rem;">Campus Crush sets out to break the stigma that comes with dating in Nigeria. Join in or watch our videos here and then below is our social links. Then we can either use that video and have it play there or we can say something like we’ve done vids with and then it’s pics of all the people we’ve interviewed and their names</p>
                         <ul style="display: flex; justify-content: center; gap: 20px;">
                             <li><a href="" class="tooltipped" data-position="left" data-tooltip="Instagram" style="font-size: 5em; color: #f06292;"><i class='bx bxl-instagram'></i></a></li>
                             <li><a href="https://www.tiktok.com/@campuscrush_app" class="tooltipped" data-position="bottom" data-tooltip="TikTok" style="font-size: 5em; color: #f06292;"><i class='bx bxl-tiktok' ></i></a></li>
                             <li><a href="#" class="tooltipped" data-position="bottom" data-tooltip="Youtube" style="font-size: 5em; color: #f06292;"><i class='bx bxl-youtube'></i></a></li>
                             <li><a href="#" class="tooltipped" data-position="bottom" data-tooltip="Snapchat" style="font-size: 5em; color: #f06292;"><i class='bx bxl-snapchat'></i></a></li>
-                            <li><a href="#" class="tooltipped" data-position="bottom" data-tooltip="X" style="font-size: 5em; color: #f06292;"><i class='bx bx-x'></i></a></li>
+                            <!-- <li><a href="#" class="tooltipped" data-position="bottom" data-tooltip="X" style="font-size: 5em; color: #f06292;"><i class='bx bx-x'></i></a></li> -->
                         </ul>
                     </div>
-                    <div class="col s12 l4 push-l1">
-                        <div class="carousel carousel-slider center">
-                            <div class="carousel-fixed-item">
-
-                            </div>
-                            <div class="carousel-item scale center">
-                                <h2 class="white-text bold-text"><span class="pink-text text-lighten-2">#</span>Kofe</h2>
-                                <a href="https://www.tiktok.com/@campuscrush_app"><img src="./img/interview1.jpeg" style="width: 300px; z-index: -1; position: relative; top: -80px;"></a>
-                            </div>
-                            <div class="carousel-item scale center">
-                                <h2 class="white-text bold-text"><span class="pink-text text-lighten-2">#</span>Dawn</h2>
-                                <a href="https://www.tiktok.com/@campuscrush_app"><img src="./img/interview2.jpeg" style="width: 300px; z-index: -1; position: relative; top: -80px;"></a>
-                            </div>
-                            <div class="carousel-item scale center">
-                                <h2 class="white-text bold-text"><span class="pink-text text-lighten-2">#</span>Georgina</h2>
-                                <a href="https://www.tiktok.com/@campuscrush_app"><img src="./img/interview3.jpeg" style="width: 300px; z-index: -1; position: relative; top: -80px;"></a>
-                            </div>
-                        </div>
+                    <div class="col s12 l4 hide-on-med-and-down">
+                        <img src="./img/friends1.jpeg" style="max-width: 500px;">
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section" style="background-image: url(./img/whiteBg.jpg);">
+        <section class="section" >
             <div class="container center">
                 <div class="row">
                     <div class="col s12">
-                        <h1 class="bold-text">Excited?</h1>
-                        <p class="flow-text grey-text">We know you are, Join the waitlist to be notified of release early, and have your name pinned down on Campus Crush as part of our first 1000 users</p>
+                        <h1 class="bold-text">Here's what people have to <span class="pink-text text-lighten-2">Say</span></h1>
+                        <p class="flow-text grey-text">Hear from out testers and early access users what they had to say about our demo</p>
+                        <div class="row">
+                            <div class="col s6 l3">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, aliquam quam dolore cum deleniti ea facere praesentium rerum nostrum vel.</p>
+                                <h5 class="bold-text">John Doe</h5>
+                                <span>⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <div class="col s6 l3">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, aliquam quam dolore cum deleniti ea facere praesentium rerum nostrum vel.</p>
+                                <h5 class="bold-text">John Doe</h5>
+                                <span>⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <div class="col s6 l3">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, aliquam quam dolore cum deleniti ea facere praesentium rerum nostrum vel.</p>
+                                <h5 class="bold-text">John Doe</h5>
+                                <span>⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <div class="col s6 l3">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, aliquam quam dolore cum deleniti ea facere praesentium rerum nostrum vel.</p>
+                                <h5 class="bold-text">John Doe</h5>
+                                <span>⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <div class="col s6 l3">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, aliquam quam dolore cum deleniti ea facere praesentium rerum nostrum vel.</p>
+                                <h5 class="bold-text">John Doe</h5>
+                                <span>⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <div class="col s6 l3">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, aliquam quam dolore cum deleniti ea facere praesentium rerum nostrum vel.</p>
+                                <h5 class="bold-text">John Doe</h5>
+                                <span>⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <div class="col s6 l3">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, aliquam quam dolore cum deleniti ea facere praesentium rerum nostrum vel.</p>
+                                <h5 class="bold-text">John Doe</h5>
+                                <span>⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <div class="col s6 l3">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, aliquam quam dolore cum deleniti ea facere praesentium rerum nostrum vel.</p>
+                                <h5 class="bold-text">John Doe</h5>
+                                <span>⭐⭐⭐⭐⭐</span>
+                            </div>
+                        </div>
                         <a href="#modal" class="btn btn-large pink lighten-2 white-text curved z-depth-0 modal-trigger">Join the Waitlist</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="hide-on-med-and-down" style="background-image: url(./img/whiteBg.jpg);">
-            <div class="container center">
-                <div class="row">
-                    <h1 class="bold-text"><span class="pink-text text-lighten-2">Countdown</span> with us🥰</h1>
-                    <div class="col s12 l3">
-                        <div class="card center scale" style="width: 200px; border-radius: 40px;">
-                            <div class="card-content">
-                                <h1 class="bold-text" style="font-size: 5em;" id="days"></h1>
-                                <h4 class="long-text grey-text">Days</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 l3">
-                        <div class="card center scale" style="width: 200px; border-radius: 40px;">
-                            <div class="card-content">
-                                <h1 class="bold-text" style="font-size: 5em;" id="hours"></h1>
-                                <h4 class="long-text grey-text">Hours</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 l3">
-                        <div class="card center scale" style="width: 200px; border-radius: 40px;">
-                            <div class="card-content">
-                                <h1 class="bold-text" style="font-size: 5em;" id="mins"></h1>
-                                <h4 class="long-text grey-text">Mins</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 l3">
-                        <div class="card center scale" style="width: 200px; border-radius: 40px;">
-                            <div class="card-content">
-                                <h1 class="bold-text" style="font-size: 5em;" id="secs"></h1>
-                                <h4 class="long-text grey-text">Secs</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="hide-on-large-only" style="background-image: url(./img/whiteBg.jpg);">
-            <div class="container center">
-                <div class="row">
-                    <h1 class="bold-text"><span class="pink-text text-lighten-2">Countdown</span> with us🥰</h1>
-                    <div class="col s12">
-                        <h2 class="bold-text"><span id="days-mobile"></span> : <span id="hours-mobile"></span> : <span id="mins-mobile"></span> : <span id="secs-mobile"></span></h2>
                     </div>
                 </div>
             </div>
@@ -346,7 +399,7 @@
     <script>
         $(document).ready(function(){
             $('.slider').slider({
-                height: 540,
+                height: 700,
                 interval: 6000,
                 indicators: false,
             });
