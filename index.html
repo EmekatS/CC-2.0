@@ -89,6 +89,12 @@
         .slider:hover .item{
             animation-play-state: paused!important;
         }
+        .carousel .indicators .indicator-item {
+            background-color: #f06292;
+        }
+        .carousel .indicators .indicator-item.active {
+            background-color: pink;
+        }
     </style>
     <title>Campus Crush</title>
 </head>
@@ -107,7 +113,7 @@
             <section style="background-image: url(./img/pinkBg.jpg);">
                 <div class="container center">
                     <h1 class="bold-text hide-on-med-and-down" style="font-size: 9em;"><span class="pink-text text-lighten-2">#</span>Loveinsession</h1>
-                    <h1 class="bold-text hide-on-large-only" style="font-size: 3em;"><span class="pink-text text-lighten-2">#</span>Loveinsession</h1>
+                    <h1 class="bold-text hide-on-large-only" style="font-size: 6em;"><span class="pink-text text-lighten-2">#</span>Loveinsession</h1>
                     <div class="row hide-on-med-and-down">
                         <div class="col s12">
                             <div class="row">
@@ -148,9 +154,9 @@
                         </div>
                     </div>
                     <div class="row hide-on-large-only">
-                        <h1 class="bold-text"><span class="pink-text text-lighten-2">Countdown</span> with us🥰</h1>
+                        <h3 class="bold-text"><span class="pink-text text-lighten-2">Countdown</span> with us</h3>
                         <div class="col s12">
-                            <h2 class="bold-text"><span id="days-mobile"></span> : <span id="hours-mobile"></span> : <span id="mins-mobile"></span> : <span id="secs-mobile"></span></h2>
+                            <h3 class="bold-text"><span id="days-mobile"></span> : <span id="hours-mobile"></span> : <span id="mins-mobile"></span> : <span id="secs-mobile"></span></h3>
                         </div>
                     </div>
                     <a href="#modal" class="btn btn-large pink lighten-2 white-text curved z-depth-0 modal-trigger" style="pointer-events: all; margin-bottom: 40px;">Join the Waitlist</a>
@@ -180,7 +186,7 @@
         </section>
         <section class="section">
             <div class="container center">
-                <h1 class="bold-text">Why <span class="pink-text text-lighten-2">Choose</span> Campus Crush <span class="pink-text text-lighten-2">?</span></h1>
+                <h1 class="bold-text">Why <span class="pink-text text-lighten-2">Choose?</span></h1>
                 <p class="flow-text grey-text">We offer a wide variety of features to make your experience memorable</p>
                 <div class="row">
                     <div class="col s12">
@@ -218,7 +224,7 @@
                                     <div class="card center z-depth-0" style="border-radius: 50%; height: 200px; border: 2px solid #f06292;">
                                         <div class="card-image" style="display: flex; justify-content: center;"><img src="./img/dating-feature.png" style="max-width: 70px; margin-top: 40px; margin-bottom: -20px;"></div>
                                         <div class="card-content">
-                                            <h5>Dating Feature</h5>
+                                            <h5>Dual Dating Feature</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -226,7 +232,7 @@
                                     <div class="card center z-depth-0" style="border-radius: 50%; height: 200px; border: 2px solid #f06292;">
                                         <div class="card-image" style="display: flex; justify-content: center;"><img src="./img/early-access.png" style="max-width: 70px; margin-top: 40px; margin-bottom: -20px;"></div>
                                         <div class="card-content">
-                                            <h5>Early Access</h5>
+                                            <h5>Early Party Access</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -234,7 +240,7 @@
                                     <div class="card center z-depth-0" style="border-radius: 50%; height: 200px; border: 2px solid #f06292;">
                                         <div class="card-image" style="display: flex; justify-content: center;"><img src="./img/games.png" style="max-width: 70px; margin-top: 40px; margin-bottom: -20px;"></div>
                                         <div class="card-content">
-                                            <h5>Variety of games</h5>
+                                            <h5>Ice breaking games</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -282,7 +288,7 @@
                     </div>
                     <div class="col s12 l4">
                         <img src="./img/friends3.jpeg" style="border-radius: 30px; width: 300px;">
-                        <h4 class="bold-text">Amazing <span class="pink-text text-lighten-2">Oppurtunities</span></h4>
+                        <h4 class="bold-text">Amazing <span class="pink-text text-lighten-2">Opportunities</span></h4>
                         <p class="flow-text grey-text">You can never know who's out there, limitless possibilities</p>
                     </div>
                 </div>
@@ -316,27 +322,30 @@
                         <div class="row">
                             <div class="col s12">
                                 <div class="carousel carousel-slider center">
-                                    <div class="carousel-item text-lighten-2" style="background-image: url(./img/pinkBg.jpg);">
+                                    <div class="carousel-fixed-item">
+                                        <a href="#modal" class="pink white-text btn btn-large curved lighten-2">Join the waitlist</a>
+                                    </div>
+                                    <div class="carousel-item text-lighten-2">
                                         <h4 class="bold-text">Hannan, 18</h4>
                                         <p class="flow-text">It’s a creative and unique concept, something I never expected to see from Nigerians in Nigeria. It’s a great way for Nigerian youth to connect romantically and platonically, explore new relationships, and get to know people from diverse backgrounds.
                                         </p>
                                     </div>
-                                    <div class="carousel-item text-lighten-2" style="background-image: url(./img/whiteBg.jpg);">
+                                    <div class="carousel-item text-lighten-2">
                                         <h4 class="bold-text">Emmanuel, 20</h4>
                                         <p class="flow-text">It’s definitely going to work! I’ve told some friends, and they’re already excited and anticipating it.
                                         </p>
                                     </div>
-                                    <div class="carousel-item text-lighten-2" style="background-image: url(./img/pinkBg.jpg);">
+                                    <div class="carousel-item text-lighten-2">
                                         <h4 class="bold-text">Donald, 18</h4>
                                         <p class="flow-text">Honestly, I think it’s a great idea—very lucrative with so many people on social media. And being in college making friends or forming relationships in college can be challenging for some.
                                         </p>
                                     </div>
-                                    <div class="carousel-item text-lighten-2" style="background-image: url(./img/whiteBg.jpg);">
+                                    <div class="carousel-item text-lighten-2">
                                         <h4 class="bold-text">Daniella, 19</h4>
                                         <p class="flow-text">I look forward to seeing how it goes. It sounds really promising.
                                         </p>
                                     </div>
-                                    <div class="carousel-item text-lighten-2" style="background-image: url(./img/pinkBg.jpg);">
+                                    <div class="carousel-item text-lighten-2">
                                         <h4 class="bold-text">Yuri, 19</h4>
                                         <p class="flow-text">It’s a great idea because no one has really explored this space. If you think about it, there’s no dating app specifically tailored for university students.
                                         </p>
@@ -353,63 +362,37 @@
                 <h1 class="bold-text">Here's what people have to <span class="pink-text text-lighten-2">Say</span></h1>
                 <p class="flow-text grey-text">We asked you, and this is what you said</p>
                 <div class="row">
-                    <div class="col l4">
-                        <ul class="collapsible">
-                            <li>
-                                <div class="collapsible-header"><h3>Hannan, 18</h3></div>
-                                <div class="collapsible-body">
-                                    <p class="flow-text">
-                                        It’s a creative and unique concept, something I never expected to see from Nigerians in Nigeria. It’s a great way for Nigerian youth to connect romantically and platonically, explore new relationships, and get to know people from diverse backgrounds.
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col l4">
-                        <ul class="collapsible">
-                            <li>
-                                <div class="collapsible-header"><h3>Emmanuel, 20</h3></div>
-                                <div class="collapsible-body">
-                                    <p class="flow-text">
-                                        It’s definitely going to work! I’ve told some friends, and they’re already excited and anticipating it.
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col l4">
-                        <ul class="collapsible">
-                            <li>
-                                <div class="collapsible-header"><h3>Donald, 18</h3></div>
-                                <div class="collapsible-body">
-                                    <p class="flow-text">
-                                        Honestly, I think it’s a great idea—very lucrative with so many people on social media. And being in college making friends or forming relationships in college can be challenging for some.
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="row">
-                        <div class="col l4">
-                            <ul class="collapsible">
-                                <li>
-                                    <div class="collapsible-header"><h3>Daniella, 19</h3></div>
-                                    <div class="collapsible-body">
-                                        <p class="flow-text">
-                                            I look forward to seeing how it goes. It sounds really promising.
-                                        </p>
+                    <div class="col s12">
+                        <div class="slider black">
+                            <ul class="slides" style="background-image: url(./img/whiteBg.jpg);">
+                                <li class="transparent">
+                                    <div class="caption center-align">
+                                        <h3 class="bold-text pink-text text-lighten-2" style="margin-top: -90px;">Hannan, 18</h3>
+                                        <p class="flow-text black-text">It’s a creative and unique concept, something I never expected to see from Nigerians in Nigeria. It’s a great way for Nigerian youth to connect romantically and platonically, explore new relationships, and get to know people from diverse backgrounds.</p>
                                     </div>
                                 </li>
-                            </ul>
-                        </div>
-                        <div class="col l4">
-                            <ul class="collapsible">
-                                <li>
-                                    <div class="collapsible-header"><h3>Yuri, 19</h3></div>
-                                    <div class="collapsible-body">
-                                        <p class="flow-text">
-                                            It’s a great idea because no one has really explored this space. If you think about it, there’s no dating app specifically tailored for university students.
-                                        </p>
+                                <li class="transparent">
+                                    <div class="caption center-align">
+                                        <h3 class="bold-text pink-text text-lighten-2" style="margin-top: -70px;">Emmanuel, 20</h3>
+                                        <p class="flow-text black-text">It’s definitely going to work! I’ve told some friends, and they’re already excited and anticipating it.</p>
+                                    </div>
+                                </li>
+                                <li class="transparent">
+                                    <div class="caption center-align">
+                                        <h3 class="bold-text pink-text text-lighten-2" style="margin-top: -70px;">Donald, 18</h3>
+                                        <p class="flow-text black-text">Honestly, I think it’s a great idea—very lucrative with so many people on social media. And being in college making friends or forming relationships in college can be challenging for some.</p>
+                                    </div>
+                                </li>
+                                <li class="transparent">
+                                    <div class="caption center-align">
+                                        <h3 class="bold-text pink-text text-lighten-2" style="margin-top: -70px;">Daniella, 19</h3>
+                                        <p class="flow-text black-text">I look forward to seeing how it goes. It sounds really promising.</p>
+                                    </div>
+                                </li>
+                                <li class="transparent">
+                                    <div class="caption center-align">
+                                        <h3 class="bold-text pink-text text-lighten-2" style="margin-top: -70px;">Yuri, 18</h3>
+                                        <p class="flow-text black-text">It’s a great idea because no one has really explored this space. If you think about it, there’s no dating app specifically tailored for university students.</p>
                                     </div>
                                 </li>
                             </ul>
@@ -456,8 +439,8 @@
     <script>
         $(document).ready(function(){
             $('.slider').slider({
-                height: 700,
-                interval: 6000,
+                height: 600,
+                interval: 4000,
                 indicators: false,
             });
                 $('.carousel').carousel();
