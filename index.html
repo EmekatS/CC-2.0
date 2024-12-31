@@ -6,7 +6,8 @@
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Patrick+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -94,6 +95,10 @@
         }
         .carousel .indicators .indicator-item.active {
             background-color: pink;
+        }
+        [type="checkbox"]:checked+span:not(.lever):before {
+            border-right: 1px solid #f06292 !important;
+            border-bottom: 1px solid #f06292 !important;
         }
     </style>
     <title>Campus Crush</title>
@@ -189,21 +194,21 @@
                 <p class="flow-text grey-text">We offer a wide variety of features to make your experience memorable</p>
                 <div class="row">
                     <div class="col s12">
-                        <div class="slider" reverse="true" style="
+                        <div class="slider swiper" reverse="true" style="
                             --width: 200px;
                             --height: 200px;
                             --quantity: 6;
                         ">
-                            <div class="list">
-                                <div class="item modal-trigger scale" href="#customizable" style="--position: 1; cursor: pointer;">
-                                    <div class="card center z-depth-0" style="border-radius: 50%; height: 200px; border: 2px solid #f06292;">
+                            <div class="list swiper-wrapper">
+                                <div class="item modal-trigger scale swiper-slide" href="#customizable" style="--position: 1; cursor: pointer;">
+                                    <div class="card center z-depth-0 " style="border-radius: 50%; height: 200px; border: 2px solid #f06292;">
                                         <div class="card-image" style="display: flex; justify-content: center;"><img src="./img/customizable.png" style="max-width: 70px; margin-top: 40px; margin-bottom: -20px;"></div>
                                         <div class="card-content">
                                             <h5>Customizable Profiles</h5>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item modal-trigger scale" href="#connections" style="--position: 2; cursor: pointer;">
+                                <div class="item modal-trigger scale swiper-slide" href="#connections" style="--position: 2; cursor: pointer;">
                                     <div class="card center z-depth-0" style="border-radius: 50%; height: 200px; border: 2px solid #f06292;">
                                         <div class="card-image" style="display: flex; justify-content: center;"><img src="./img/verified-connections.png" style="max-width: 70px; margin-top: 40px; margin-bottom: -20px;"></div>
                                         <div class="card-content">
@@ -211,7 +216,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item modal-trigger scale" href="#hangouts" style="--position: 3; cursor: pointer;">
+                                <div class="item swiper-slide modal-trigger scale" href="#hangouts" style="--position: 3; cursor: pointer;">
                                     <div class="card center z-depth-0" style="border-radius: 50%; height: 200px; border: 2px solid #f06292;">
                                         <div class="card-image" style="display: flex; justify-content: center;"><img src="./img/hangout.png" style="max-width: 70px; margin-top: 40px; margin-bottom: -20px;"></div>
                                         <div class="card-content">
@@ -219,7 +224,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item modal-trigger scale" href="#dating" style="--position: 4; cursor: pointer;">
+                                <div class="item swiper-slide modal-trigger scale" href="#dating" style="--position: 4; cursor: pointer;">
                                     <div class="card center z-depth-0" style="border-radius: 50%; height: 200px; border: 2px solid #f06292;">
                                         <div class="card-image" style="display: flex; justify-content: center;"><img src="./img/dating-feature.png" style="max-width: 70px; margin-top: 40px; margin-bottom: -20px;"></div>
                                         <div class="card-content">
@@ -227,7 +232,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item modal-trigger scale" href="#party" style="--position: 5; cursor: pointer;">
+                                <div class="item swiper-slide modal-trigger scale" href="#party" style="--position: 5; cursor: pointer;">
                                     <div class="card center z-depth-0" style="border-radius: 50%; height: 200px; border: 2px solid #f06292;">
                                         <div class="card-image" style="display: flex; justify-content: center;"><img src="./img/early-access.png" style="max-width: 70px; margin-top: 40px; margin-bottom: -20px;"></div>
                                         <div class="card-content">
@@ -235,7 +240,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item modal-trigger scale" href="#games" style="--position: 6; cursor: pointer;">
+                                <div class="item swiper-slide modal-trigger scale" href="#games" style="--position: 6; cursor: pointer;">
                                     <div class="card center z-depth-0" style="border-radius: 50%; height: 200px; border: 2px solid #f06292;">
                                         <div class="card-image" style="display: flex; justify-content: center;"><img src="./img/games.png" style="max-width: 70px; margin-top: 40px; margin-bottom: -20px;"></div>
                                         <div class="card-content">
@@ -244,6 +249,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="swiper-scrollbar"></div>
                     </div>
                 </div>
             </div>
@@ -472,7 +478,7 @@
                                 <li class="transparent">
                                     <div class="caption center-align">
                                         <h3 class="bold-text pink-text text-lighten-2" style="margin-top: -70px;">David, 23</h3>
-                                        <p class="flow-text black-text">I'm locked in with this 2025, already drooling on the it's potential.
+                                        <p class="flow-text black-text">I'm locked in with this 2025, already drooling thinking about it.
                                         </p>
                                     </div>
                                 </li>
@@ -496,7 +502,12 @@
                 </div>
             </div>
         </section>
-        <div class="modal" id="modal">
+        <section class="section hide-on-med-and-down">
+            <div class="container center">
+                <a href="#modal" class="btn btn-large pink lighten-2 white-text curved z-depth-0 modal-trigger" style="pointer-events: all;">Join the Waitlist</a>
+            </div>
+        </section>
+        <div class="modal" id="modal" style="overflow-x: hidden;">
             <div class="container">
                 <form action="">
                     <div class="row">
@@ -510,11 +521,135 @@
                             <label for="email">Enter your Email</label>
                             <input type="email" required id="email">
                         </div>
-                        <div class="col s12 input-field">
+                        <div class="col s12 input-field" style="margin-top: -10px;">
+                            <p>
+                                <label>
+                                    <input type="checkbox" required>
+                                    <span><a href="#tos" class="bold-text pink-text text-lighten-2 modal-trigger">Terms of Service</a></span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="col s12 input-field" style="margin-top: -20px;">
+                            <p>
+                                <label>
+                                    <input type="checkbox" required>
+                                    <span><a href="#pp" class="bold-text pink-text text-lighten-2 modal-trigger">Privacy Policy</a></span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="col s12 input-field" style="margin-top: -20px; margin-left: 400px;">
                             <button class="pink white-text lighten-2 btn btn-large curved">Submit</button>
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+        <div class="modal modal-fixed-footer" id="tos">
+            <div class="modal-content">
+                <div class="container center">
+                    <h3 class="bold-text">Terms of <span class="pink-text text-lighten-2">Service</span></h3>
+                    <p class="grey-text">Welcome to Campus Crush! By accessing or using this website (the “Site”) or the Campus
+                        Crush app (collectively, the “Services”), you agree to comply with and be bound by the
+                        following Terms and Conditions. If you do not agree to these terms, please refrain from using
+                        our Services.
+                    </p>
+                    <div class="container">
+                        <div class="divider"></div>
+                    </div>
+                    <h5 class="bold-text pink-text text-lighten-2">Elgibility</h5>
+                    <p class="grey-text">
+                        he Campus Crush Services are exclusively intended for individuals who are 18 years of
+                        age or older. By accessing or using our Services, you affirm that you are at least 18 years
+                        old. Individuals who are under the age of 18 cannot participate in the use of the Campus
+                        Crush Services nor any giveaways or events unless ourightly stated otherwise
+                    </p>
+                    <p class="grey-text">
+                        We do not knowingly collect or process information from individuals under the age of 18. If
+                        you believe someone under 18 has accessed our Services, please contact us immediately.
+                    </p>
+                    <div class="container">
+                        <div class="divider"></div>
+                    </div>
+                    <h5 class="bold-text">Use of the Site and <span class="pink-text text-lighten-2">Services</span></h5>
+                    <p class="grey-text">
+                        You agree to use the Site and Services in compliance with all applicable laws and
+                        regulations. You further agree that: <br>
+                        <span class="black-text">1.</span> You will not use false information or impersonate others when using the Services. <br>
+                        <span class="black-text">2.</span> You are solely responsible for the accuracy of the information you provide to us or
+                        other users. <br>
+                        <span class="black-text">3.</span> You will not engage in harmful, unlawful, or fraudulent activities while using the
+                        Services.
+                    </p>
+                    <p class="grey-text"><span class="pink-text text-lighten-2 bold-text">Disclaimer:</span> Campus Crush is not liable for any consequences arising from false, inaccurate,
+                        or misleading information provided by users of the platform. Users are responsible for
+                        verifying the authenticity of information shared by other users.</p>
+                    <div class="container">
+                        <div class="divider"></div>
+                    </div>
+                    <h5 class="bold-text"><span class="pink-text text-lighten-2">Intellectual</span> Property</h5>
+                    <p class="grey-text">All content on the Site and Services, including text, graphics, logos, code, and features, is
+                        the property of Campus Crush and is protected by copyright, trademark, and other
+                        intellectual property laws. You may not reproduce, distribute, or modify any content without
+                        explicit permission from Campus Crush.</p>
+                    <div class="container">
+                        <div class="divider"></div>
+                    </div>
+                    <h5 class="bold-text pink-text text-lighten-2">Privacy</h5>
+                    <p class="grey-text">
+                        Your privacy is important to us. Please review our <a href="#pp" class="pink-text text-lighten-2 bold-text modal-trigger">Privacy Policy</a> for details on how we
+                        collect, use, and protect your personal information.
+                    </p>
+                    <div class="container">
+                        <div class="divider"></div>
+                    </div>
+                    <h5 class="bold-text">Disclaimer of <span class="pink-text text-lighten-2">Warranties</span></h5>
+                    <p class="grey-text">The Site and Services are provided “as is” and without warranties of any kind, whether
+                        express or implied. Campus Crush does not guarantee the accuracy, reliability, or
+                        completeness of any content or communication on the platform.</p>
+                    <div class="container">
+                        <div class="divider"></div>
+                    </div>
+                    <h5 class="bold-text">Limitations of <span class="pink-text text-lighten-2">Liabilities</span></h5>
+                    <p class="grey-text">To the maximum extent permitted by law, Campus Crush, its founders, affiliates, and
+                        partners are not liable for:
+                        <span class="black-text">1.</span>  Any damages, direct or indirect, arising from your use of the Services. <br>
+                        <span class="black-text">2.</span>  Issues caused by false or inaccurate information shared by users.
+                        <br>
+                        <span class="black-text">3.</span>  Losses, disputes, or conflicts resulting from user interactions.
+                    </p>
+                    <p class="grey-text">Users are encouraged to exercise caution and verify any claims or representations made by
+                        others on the platform.
+                        </p>
+                    <h5 class="bold-text">Third-<span class="pink-text text-lighten-2">Party</span> Links</h5>
+                    <p class="grey-text">The Site and Services may contain links to third-party websites or services. Campus Crush
+                        is not responsible for the content, privacy practices, or reliability of these external resources.
+                        Use of such links is at your own discretion.</p>
+                    <h5 class="bold-text"><span class="pink-text text-lighten-2">Governing</span> Law</h5>
+                    <p class="grey-text">These Terms and any disputes arising from your use of the Services will be governed by and
+                        interpreted under the laws of Nigeria, without regard to its conflict of law principles.</p>
+                    <div class="container">
+                        <div class="divider"></div>
+                    </div>
+                    <h5 class="bold-text"><span class="pink-text-text-lighten-2">Changes</span> to the Terms</h5>
+                    <p class="grey-text">Campus Crush reserves the right to update or modify these Terms at any time. Continued
+                        use of the Services after changes are made constitutes your acceptance of the revised
+                        Terms. We recommend reviewing this page regularly for updates</p>
+                    <div class="container">
+                        <div class="divider"></div>
+                    </div>
+                    <h5 class="bold-text">Contact <span class="pink-text-text-lighten-2">Information</span></h5>
+                    <p class="grey-text">For questions or concerns about these Terms, you can contact us at:
+                    <span class="black-text">Campus Crush Team</span> <br>
+                    <span class="bold-text pink-text text-lighten-2">Email:</span> <span class="black-text">Contact@campuscrush.app</span>
+                    </p>
+                    <div class="container">
+                        <div class="divider"></div>
+                    </div>
+                    <h5 class="bold-text"><span class="pink-text text-lighten-2">Termination</span> of Use</h5>
+                    <p class="grey-text">Campus Crush reserves the right to restrict, suspend, or terminate access to the Services at
+                        our discretion, with or without notice, for any violations of these Terms or applicable laws.</p>
+                    <button class="btn btn-large pink lighten-2 white-text curved">I Agree</button>
+                </div>
             </div>
         </div>
         <footer class="page-footer white">
@@ -531,6 +666,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         $(document).ready(function(){
             $('.slider').slider({
@@ -587,6 +723,28 @@
             }
 
             setInterval(updateCountdown, 1000);
+
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                direction: 'vertical',
+                loop: true,
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+                });
 
     </script>
 </body>
