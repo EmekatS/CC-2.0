@@ -854,5 +854,22 @@
                 });
 
     </script>
+    <script>
+        document.getElementById('email-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            
+            fetch('https://wrongfestus.pythonanywhere.com/', {  // Replace with your Flask API URL
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email: email })
+            })
+            .then(response => response.json())
+            .then(data => alert(data.message))  // Display the success message
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
 </body>
 </html>
