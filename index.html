@@ -901,6 +901,10 @@
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
 
+            const delayTimer = setTimeout(() => {
+                alert('The server is taking longer than expected. Please wait...');
+            }, 2000); // Alert after 2 seconds of delay
+
             try {
             // Send the data to the Flask API
                 const response = await fetch('https://campus-crush.onrender.com/api/v1/waitlist', {  // Replace with your full API URL
@@ -912,6 +916,10 @@
                 });
 
                 const result = await response.json();
+
+                
+                // Clear the delay timer if the response is received in time
+                clearTimeout(delayTimer);
 
                 if (response.ok) {
                     alert('Thank you for waitlisting! We will notify you soon. Hope to see you on our official drop!!!');
