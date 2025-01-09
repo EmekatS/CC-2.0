@@ -594,17 +594,18 @@
     </div>
 </div>
 
-<div class="modal" id="thanks" style="overflow-x: hidden; display: none;">
-    <div class="container center">
-        <div class="row">
-            <div class="col s12">
-                <h1 class="bold-text pink-text text-lighten-2"><i class="material-icons" style="font-size: 2em;">check_circle</i></h1>
-                <h3 class="bold-text"><span class="pink-text text-lighten-2">Thank You</span> for Joining</h3>
-                <p class="flow-text grey-text">You will be informed more in detail in any new developments concerning <span class="pink-text text-lighten-2">Campus Crush</span></p>
+<!-- <div class="modal" id="thanks" style="overflow-x: hidden;">
+            <div class="container center">
+                <div class="row">
+                    <div class="col s12">
+                        <h1 class="bold-text pink-text text-lighten-2"><i class="material-icons" style="font-size: 2em;">check_circle</i></h1>
+                        <h3 class="bold-text"><span class="pink-text text-lighten-2">Thank You</span> for Joining</h3>
+                        <p class="flow-text grey-text">You will be informed more in detail in any new developments concerning <span class="pink-text text-lighten-2">Campus Crush</span></p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
+        </div> -->
+
 
         <div class="modal modal-fixed-footer" id="tos">
             <div class="modal-content">
@@ -920,8 +921,9 @@
 
             if (response.ok) {
                 // Display the thank you modal
-                document.getElementById('modal').style.display = 'none';
-                document.getElementById('thanks').style.display = 'block';
+                // document.getElementById('modal').style.display = 'none';
+                // document.getElementById('thanks').style.display = 'block';
+                alert("Thanks for signing up for the waitlist. Kindly check your mail for more info");
             } else {
                 alert('Error: ' + (result.error || 'An error occurred'));
             }
